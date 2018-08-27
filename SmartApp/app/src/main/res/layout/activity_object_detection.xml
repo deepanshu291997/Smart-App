@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="mudit.com.smartapp.ObjectDetection">
+<TextView
+    android:id="@+id/tvView"
+    android:layout_width="match_parent"
+    android:text="Detected object will be shown here"
+    android:layout_height="200dp" />
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btStart1"
+        android:text="Start Object Detection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

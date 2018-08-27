@@ -1,0 +1,55 @@
+// import DownloadModels task
+project.ext.ASSET_DIR = projectDir.toString() + '/assets'
+project.ext.TMP_DIR = project.buildDir.toString() + '/downloads'
+
+apply plugin: 'com.android.application'
+
+def nativeBuildSystem = 'none'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "mudit.com.smartapp"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    if (nativeBuildSystem == 'cmake' || nativeBuildSystem == 'none') {
+        compile 'org.tensorflow:tensorflow-android:+'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.api-client:google-api-client-android:1.22.0'
+    compile 'com.google.apis:google-api-services-vision:v1-rev357-1.22.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.google.code.findbugs:jsr305:2.0.1'
+    compile 'commons-io:commons-io:2.5'
+    compile 'com.google.android.gms:play-services-vision:9.8.0'
+    compile 'com.android.support:design:25.3.1'
+    compile 'org.tensorflow:tensorflow-android:+'
+
+    testCompile 'junit:junit:4.12'
+}
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
+}

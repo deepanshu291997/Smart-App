@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@android:color/black"
+tools:context="mudit.com.smartapp.SplashScreen">
+
+
+<ImageView
+    android:id="@+id/imgView"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+<TextView
+    android:textColor="@android:color/white"
+    android:id="@+id/tvFamilybrations"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="46sp"
+    android:textStyle="bold"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="100dp"
+    android:text="Smart App"
+    android:fontFamily="cursive"/>
+
+<TextView
+    android:padding="20dp"
+    android:textColor="@android:color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="22sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="50dp"
+    android:gravity="center"
+    android:layout_gravity="bottom|center"
+    android:text="Making Life Easier"
+    android:fontFamily="casual"/>
+
+
+</FrameLayout>
